@@ -18,8 +18,7 @@ const App = () =>  {
   const conicColors = { '0%': '#87d068', '50%': '#ffe58f', '100%': '#ffccc7' };
 
   const sendAjax = (url, runs) => {
-    console.log("-> url, runs", url, runs);
-    fetch(`//localhost:3000/analyze`, {
+    fetch(`//39.104.28.31/:3000/analyze`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
