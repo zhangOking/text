@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "build-web": "node src/scripts/buildWeb.js"
+    "build:web": "node src/scripts/buildWeb.js"
   },
   "author": "",
   "license": "ISC",

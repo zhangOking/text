@@ -71,7 +71,7 @@ const App = () =>  {
         t += 1
         setPercent(t * time)
       }
-    }, 10000)
+    }, 25000)
   }
 
   const onSearch = useCallback((v) => {
