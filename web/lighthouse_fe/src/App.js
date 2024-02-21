@@ -31,7 +31,7 @@ const App = () =>  {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        if (data.success) {
+        if (+data.code === 200) {
           const td = data.data.result.map((e, i) => {
             return {
               times: i + 1,
@@ -49,7 +49,7 @@ const App = () =>  {
       .catch(error => console.error('Error:', error));
   }
 
-  const fakeProgress = () => {
+  const fakeProgress = (v, times) => {
     setShow(true)
     const time = 100 / times
     let t = 0
@@ -71,6 +71,8 @@ const App = () =>  {
         t += 1
         setPercent(t * time)
       }
+
+      sendAjax(v, times)
     }, 25000)
   }
 
@@ -83,7 +85,7 @@ const App = () =>  {
         setShow(false)
         message.success('执行成功，正在进行测试，请不要关闭页面');
         setLoading(true)
-        fakeProgress()
+        fakeProgress(v, times)
         sendAjax(v, times)
         return
       }
