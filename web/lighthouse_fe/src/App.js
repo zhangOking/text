@@ -18,7 +18,7 @@ const App = () =>  {
   const conicColors = { '0%': '#87d068', '50%': '#ffe58f', '100%': '#ffccc7' };
 
   const sendAjax = (url, runs) => {
-    fetch(`//39.104.28.31/:3000/analyze`, {
+    fetch(`//39.104.28.31/analyze`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -163,7 +163,7 @@ const App = () =>  {
                           key: 'link',
                           render: (v) => {
                             return (
-                              <Button type="link" href={`//localhost:3000/download/${v}`}>{v}</Button>
+                              <Button type="link" href={`//39.104.28.31/download/${v}`}>{v}</Button>
                             )
                           }
                         }

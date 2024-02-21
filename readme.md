@@ -22,3 +22,9 @@ lighthouse/
 ├── package.json
 └── README.md
 ```
+
+# 使用
+前端项目修改后，请在根目录使用打包命令
+```angular2html
+npm run/yarn build-web
+```
