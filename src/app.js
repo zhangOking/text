@@ -26,6 +26,8 @@ app.use(express.static(path.join(__dirname, '../web/static')));
 // 启动定时任务
 scheduleTasks()
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+server.timeout = 300000
